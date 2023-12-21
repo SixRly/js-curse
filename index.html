@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - CURSE</title>
+</head>
+<body>
 
+    <div>
+    <input type="text" id="tipo" placeholder="tipo de conta">
+    <br><br>
+    <button onclick="calc()">Executar</button>
+</div>
+
+    <script>
+
+function somar() {
+                   var number1 = document.getElementById('num1').value
+                   var number2 = document.getElementById('num2').value
+                    number1 = parseInt(number1)
+                     number2 = parseInt(number2)
+                     document.getElementById('resulT').value = number1 + number2
+                }
+
+                function subtrai() {
+                    var number1 = document.getElementById('num1').value
+                   var number2 = document.getElementById('num2').value
+                    number1 = parseInt(number1)
+                     number2 = parseInt(number2)
+                     document.getElementById('resulT').value = number1 - number2
+                }
+
+    function calc() {
+       var tipoDeConta = document.getElementById('tipo').value
+
+       
+
+        switch(tipoDeConta) {
+            case 'soma':
+                document.write('<input type="text" placeholder="numero1" id="num1"><br><br><input type="text" placeholder="numero2" id="num2"><br><br><button onclick="somar()">Executar</button><br><br><input type="text" placeholder="result" id="resulT">')
+                
+                
+                break
+            case 'subtrair':
+            document.write('<input type="text" placeholder="numero1" id="num1"><br><br><input type="text" placeholder="numero2" id="num2"><br><br><button onclick="subtrai()">Executar</button><br><br><input type="text" placeholder="result" id="resulT">')
+                break
+        }
+        }
+    
+
+
+    </script>
+
+</body>
+</html>
